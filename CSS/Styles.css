@@ -1,27 +1,46 @@
+/*Variables*/
 :root {
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #ffc107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #dddfe0;
 }
 
+
+/*Generales*/
 html {
     font-size: 62.5%;
+    /* Hack para que 1rem valga 10px 1*/
     box-sizing: border-box;
+    /*Hack para box model para que la caja al agregarle paddin no se haga mas grande el tamaño definido*/
 }
 
 *,
 *:before,
 *:after {
     box-sizing: inherit;
+    /* Hack para que 1rem valga 10px 2*/
 }
 
 body {
     font-size: 16px;
     /*1rem = 10px */
     font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
+
+.sombra {
+    -webkit-box-shadow: 5px 17px 30px 0px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 5px 17px 30px 0px rgba(0, 0, 0, 0.61);
+    box-shadow: 5px 17px 30px 0px rgba(0, 0, 0, 0.61);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*Tipografia*/
 
 h1 {
     font-size: 3.8rem;
@@ -41,50 +60,39 @@ h3 {
     text-align: center;
 }
 
-.titulo span {
+.boton {
+    background-color: var(--secundario);
+    color: #fff;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
     font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    width: 90%;
+    text-align: center;
 }
 
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto 0 auto;
-    /*margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;*/
+
+/*MENU PRINCIPAL*/
+.titulo span {
+    font-size: 2rem;
 }
 
 .nav-bg {
     background-color: var(--secundario);
 }
 
+.contenedor {
+    max-width: 120rem;
+    /*max width dice que tome los 120px si es posible*/
+    margin: 0 auto;
+}
+
 .navegacion-principal {
     display: flex;
     flex-direction: column;
-
-}
-
-@media (min-width: 480px) {
-    /*Cambia cuando es un telefono*/
-
-}
-
-@media (min-width: 768px) {
-
-    /*Cambia cuando es una tablet*/
-    .navegacion-principal {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-@media (min-width: 1140px) {
-    /*laptop o computadora de escritorio*/
-
-}
-
-@media (min-width: 1400px) {
-    /*para tamaños mas grandes*/
 
 }
 
@@ -103,12 +111,15 @@ h3 {
     color: var(--oscuro);
 }
 
+
+/*CONTENIDO*/
 .hero {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -133,4 +144,37 @@ h3 {
 .ubicacion {
     display: flex;
     align-items: flex-end;
+}
+
+
+
+
+
+/*Media Querys  max-width es hacia abajo y min-width es hacia arriba*/
+
+@media (min-width: 480px) {
+
+    /*Cambia cuando es un telefono*/
+    .boton {
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /*Cambia cuando es una tablet*/
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1140px) {
+    /*laptop o computadora de escritorio*/
+
+}
+
+@media (min-width: 1400px) {
+    /*para tamaños mas grandes*/
+
 }
