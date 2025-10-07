@@ -176,7 +176,15 @@ h3 {
 }
 
 /*Contacto*/
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    /**utilizar el valor mas pequeño**/
+}
 
+.formulario fieldset {
+    border: none;
+}
 
 /*Media Querys  max-width es hacia abajo y min-width es hacia arriba*/
 
