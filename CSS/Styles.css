@@ -180,10 +180,22 @@ h3 {
     background-color: var(--gris);
     width: min(60rem, 100%);
     /**utilizar el valor mas pequeño**/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 .formulario fieldset {
     border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    color: var(--primario);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
 }
 
 /*Media Querys  max-width es hacia abajo y min-width es hacia arriba*/
