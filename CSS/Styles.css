@@ -72,6 +72,34 @@ h3 {
     border-radius: 1rem;
     width: 90%;
     text-align: center;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+/*utilidades*/
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .w-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+.nav-bg {
+    background-color: var(--secundario);
 }
 
 
@@ -80,9 +108,7 @@ h3 {
     font-size: 2rem;
 }
 
-.nav-bg {
-    background-color: var(--secundario);
-}
+
 
 .contenedor {
     max-width: 120rem;
@@ -198,20 +224,27 @@ h3 {
     margin-bottom: 2rem;
 }
 
-.contenedor-campos {
-    
-}
+.contenedor-campos {}
 
 .campo {
     margin-botton: 1rem;
 }
 
 .campo label {
-    color:var(--blanco);
+    color: var(--blanco);
     font-weight: bold;
     margin-bottom: .5rem;
     display: block;
 }
+
+.campo input {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+
 /*Media Querys  max-width es hacia abajo y min-width es hacia arriba*/
 
 @media (min-width: 480px) {
