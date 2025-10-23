@@ -15,6 +15,15 @@ html {
     /* Hack para que 1rem valga 10px 1*/
     box-sizing: border-box;
     /*Hack para box model para que la caja al agregarle paddin no se haga mas grande el tamaño definido*/
+    scroll-snap-type: y mandatory;
+}
+
+/*Scroll snap*/
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 *,
