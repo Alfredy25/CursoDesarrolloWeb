@@ -141,6 +141,7 @@ h3 {
     text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
+    transition: all 0.3s;
 }
 
 .navegacion-principal a:hover {
